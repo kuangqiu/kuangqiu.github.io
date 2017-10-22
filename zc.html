@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta charset="UTF-8">
 <script src="./js/Calendar.js"></script>
 </script> 
@@ -17,75 +17,75 @@ function enable()
 document.getElementById("accept").disabled=false
 }
 var province=new Array();
-province[0]="±±¾©";province[1]="ÉÏº£";province[2]="¹ã¶«";province[3]="ÉîÛÚ";
-province[4]="ÖØÇì";province[5]="Ìì½ò";province[6]="É½Î÷";
-province[7]="ÄÚÃÉ¹Å";province[8]="ÁÉÄş";province[9]="¼ªÁÖ";province[10]="½­ËÕ";
-province[11]="Õã½­";	province[12]="°²»Õ";province[13]="ºÚÁú½­";province[14]="¸£½¨";
-province[15]="½­Î÷";province[16]="É½¶«";province[17]="ºÓÄÏ";province[18]="ºş±±";
-province[19]="ºşÄÏ";province[20]="¹ãÎ÷";province[21]="º£ÄÏ";province[22]="ËÄ´¨";
-province[23]="¹óÖİ";province[24]="ÔÆÄÏ";province[25]="Î÷²Ø";province[26]="ÉÂÎ÷";
-province[27]="¸ÊËà";province[28]="Çàº£";province[29]="ÄşÏÄ";province[30]="ĞÂ½®";
-province[31]="Ïã¸Û";province[32]="°ÄÃÅ";	province[33]="Ì¨Íå";
+province[0]="åŒ—äº¬";province[1]="ä¸Šæµ·";province[2]="å¹¿ä¸œ";province[3]="æ·±åœ³";
+province[4]="é‡åº†";province[5]="å¤©æ´¥";province[6]="å±±è¥¿";
+province[7]="å†…è’™å¤";province[8]="è¾½å®";province[9]="å‰æ—";province[10]="æ±Ÿè‹";
+province[11]="æµ™æ±Ÿ";	province[12]="å®‰å¾½";province[13]="é»‘é¾™æ±Ÿ";province[14]="ç¦å»º";
+province[15]="æ±Ÿè¥¿";province[16]="å±±ä¸œ";province[17]="æ²³å—";province[18]="æ¹–åŒ—";
+province[19]="æ¹–å—";province[20]="å¹¿è¥¿";province[21]="æµ·å—";province[22]="å››å·";
+province[23]="è´µå·";province[24]="äº‘å—";province[25]="è¥¿è—";province[26]="é™•è¥¿";
+province[27]="ç”˜è‚ƒ";province[28]="é’æµ·";province[29]="å®å¤";province[30]="æ–°ç–†";
+province[31]="é¦™æ¸¯";province[32]="æ¾³é—¨";	province[33]="å°æ¹¾";
 
 
 var city =new Array();
 
 
-city[0]=new Array('¶«³ÇÇø','Î÷³ÇÇø','³çÎÄÇø','ĞûÎäÇø','³¯ÑôÇø','º£µíÇø','·áÌ¨Çø','Ê¯¾°É½');
-city[1]=new Array('±¦É½','½ğÉ½','ÄÏÊĞ','³¤Äş','¾²°²','ÇàÆÖ','³çÃ÷','Â¬Íå','ËÉ½­','·îÏÍ','ÆÖ¶«','ÑîÆÖ','ºç¿Ú','ÆÕÍÓ','Õ¢±±','»ÆÆÖ','ãÉĞĞ','Ğì»ã','¼Î¶¨','ÄÏ»ã');
-city[2]=new Array('¹ãÖİ','Öéº£','ÖĞÉ½','·ğÉ½','¶«İ¸','ÇåÔ¶','ÕØÇì','Ñô½­','Õ¿½­','ÉØ¹Ø','»İÖİ','ºÓÔ´','ÉÇÎ²','ÉÇÍ·','Ã·Öİ');
-city[3]=new Array('ÂŞºş','¸£Ìï','ÄÏÉ½','ÑÎÌï','±¦°²','Áú¸Ú');
-city[4]=new Array('ÓåÖĞ','½­±±','É³Æº°Ó','ÄÏ°¶','¾ÅÁúÆÂ','´ó¶É¿Ú');
-city[5]=new Array('ºÍÆ½','ºÓ±±','ºÓÎ÷','ºÓ¶«','ÄÏ¿ª','ºìÇÅ','ÌÁ¹Á','ºº¹Á','´ó¸Û','¶«Àö','Î÷Çà','½òÄÏ','±±³½','ÎäÇå','±õº£');
-city[6]=new Array('Ì«Ô­','´óÍ¬','ÑôÈª','Ë·Öİ','³¤ÖÎ','ÁÙ·Ú','½ú³Ç');
-city[7]=new Array('ºôºÍºÆÌØ','°üÍ·','ÎÚº£','ÁÙºÓ','¶«Ê¤','¼¯Äş','ÎıÁÖºÆÌØ','Í¨ÁÉ','³à·å','º£À­¶û','ÎÚÀ¼ºÆÌØ');
-city[8]=new Array('ÉòÑô','´óÁ¬','°°É½','½õÖİ','µ¤¶«','ÅÌ½õ','ÌúÁë','¸§Ë³','Óª¿Ú','ÁÉÑô','¸·ĞÂ','±¾Ïª','³¯Ñô','ºùÂ«µº');
-city[9]=new Array('³¤´º','¼ªÁÖ','ËÄÆ½','ÁÉÔ´','Í¨»¯','°×É½','ËÉÔ­','°×³Ç','ÑÓ±ß');
-city[10]=new Array('ÄÏ¾©','ËÕÖİ','ÎŞÎı','³£Öİ','Õò½­','Á¬ÔÆ¸Û ','ÑïÖİ','ĞìÖİ ','ÄÏÍ¨','ÑÎ³Ç','»´Òõ','Ì©Öİ','ËŞÇ¨');
-city[11]=new Array('º¼Öİ','ºşÖİ','ÀöË®','ÎÂÖİ','ÉÜĞË','ÖÛÉ½','¼ÎĞË','½ğ»ª','Ì¨Öİ','áéÖİ','Äş²¨');
-city[12]=new Array('ºÏ·Ê ','Îßºş ','°ö²º ','³üÖİ ','°²Çì ','Áù°² ','»ÆÉ½ ','Ğû³Ç ','»´ÄÏ ','ËŞÖİ ','Âí°°É½ ','Í­Áê','»´±± ','¸·Ñô ','³ØÖİ ','³²ºş ','ÙñÖİ');
-city[13]=new Array('¹ş¶û±õ','ÆëÆë¹ş¶û','Äµµ¤½­','¼ÑÄ¾Ë¹','´óÇì','ÒÁ´º','ºÚºÓ','¼¦Î÷','º×¸Ú','Ë«Ñ¼É½','ÆßÌ¨ºÓ','Ëç»¯','´óĞË°²Áë');
-city[14]=new Array('¸£Öİ ','ÏÃÃÅ ','ÈªÖİ ','ÕÄÖİ ','ÁúÑÒ ','ÄÏÆ½ ','ÄşµÂ ','ÆÎÌï ','ÈıÃ÷');
-city[15]=new Array('ÄÏ²ı','¾°µÂÕò','¾Å½­','Æ¼Ïç','ĞÂÓà','Ó¥Ì¶','¸ÓÖİ','ÒË´º','¼ª°²','ÉÏÈÄ','¸§Öİ');
-city[16]=new Array('¼ÃÄÏ','Çàµº','×Í²©','µÂÖİ','ÑÌÌ¨','Î«·»','¼ÃÄş','Ì©°²','ÁÙÒÊ','ºÊÔó','Íşº£','Ôæ×¯','ÈÕÕÕ','À³Îß','ÁÄ³Ç','±õÖİ','¶«Óª');
-city[17]=new Array('Ö£Öİ','¿ª·â','ÂåÑô','Æ½¶¥É½','°²Ñô','º×±Ú','ĞÂÏç','½¹×÷','å§Ñô','Ğí²ı','äğºÓ','ÈıÃÅÏ¿','ÄÏÑô','ÉÌÇğ','ÖÜ¿Ú','×¤Âíµê','ĞÅÑô','¼ÃÔ´');
-city[18]=new Array('Îäºº','»ÆÊ¯','Ê®Ñß','¾£Öİ','ÒË²ı','Ïå·®','¶õÖİ','¾£ÃÅ','Ğ¢¸Ğ','»Æ¸Ô','ÏÌÄş','¶÷Ê©','ËæÖİ','ÏÉÌÒ','ÌìÃÅ','Ç±½­','ÉñÅ©¼Ü');
-city[19]=new Array('³¤É³','ÖêÖİ','ÏæÌ¶','ºâÑô','ÉÛÑô','ÔÀÑô','³£µÂ','³»Öİ','ÒæÑô','ÓÀÖİ','»³»¯','Â¦µ×','ÏæÎ÷ ');
-city[20]=new Array('ÄÏÄş','ÁøÖİ','¹ğÁÖ','ÎàÖİ','±±º£','·À³Ç¸Û','ÇÕÖİ','¹ó¸Û','ÓñÁÖ','ºØÖİ','°ÙÉ«','ºÓ³Ø');
-city[21]=new Array('º£¿Ú ','ÈıÑÇ','Í¨Ê²','Çíº£','ÇíÉ½','ÎÄ²ı','ÍòÄş','¶«·½','ÙÙÖİ');
-city[22]=new Array('³É¶¼','×Ô¹±','ÅÊÖ¦»¨','ãòÖİ','µÂÑô','ÃàÑô','¹ãÔª','ËìÄş','ÄÚ½­','ÀÖÉ½','ÄÏ³ä ','ÒË±ö','¹ã°²','´ï´¨','°ÍÖĞ','ÑÅ°²','Ã¼É½ ','°¢°Ó ','¸Ê×Î ','Á¹É½ ');
-city[23]=new Array('¹óÑô ','ÁùÅÌË®','×ñÒå','Í­ÈÊ','±Ï½Ú','°²Ë³','Ç­Î÷ÄÏ ','Ç­¶«ÄÏ','Ç­ÄÏ');
-city[24]=new Array('À¥Ã÷','¶«´¨','Çú¾¸','ÓñÏª','ÕÑÍ¨','Ë¼Ã©','ÁÙ²×','±£É½','Àö½­','ÎÄÉ½ ','ºìºÓ ','Î÷Ë«°æÄÉ ','³şĞÛ ','´óÀí ','µÂºê ','Å­½­','µÏÇì');
-city[25]=new Array('À­Èø','ÄÇÇú','²ı¶¼','É½ÄÏ','ÈÕ¿¦Ôò','°¢Àï','ÁÖÖ¥');
-city[26]=new Array('Î÷°²','Í­´¨','±¦¼¦','ÏÌÑô','Î¼ÄÏ','ÑÓ°²','ººÖĞ','ÓÜÁÖ','ÉÌÂå','°²¿µ');
-city[27]=new Array('À¼Öİ','½ğ²ı','°×Òø','ÌìË®','¼ÎÓø¹Ø','¶¨Î÷','Æ½Á¹','ÇìÑô','Â¤ÄÏ','ÎäÍş','ÕÅÒ´','¾ÆÈª','¸ÊÄÏ ','ÁÙÏÄ');
-city[28]=new Array('Î÷Äş','º£¶«',' º£±± ','»ÆÄÏ','º£ÄÏ','¹ûÂå','ÓñÊ÷','º£Î÷');
-city[29]=new Array('Òø´¨','Ê¯×ìÉ½','ÒøÄÏ','¹ÌÔ­');
-city[30]=new Array('ÎÚÂ³Ä¾Æë','¿ËÀ­ÂêÒÀ','Ê¯ºÓ×Ó','ÍÂÂ³·¬','¹şÃÜ','ºÍÌï','°¢¿ËËÕ','¿¦Ê²','¿Ë×ÎÀÕËÕ','°ÍÒô¹ùÀã','²ı¼ª','²©¶ûËşÀ­','ÒÁÀç');
+city[0]=new Array('ä¸œåŸåŒº','è¥¿åŸåŒº','å´‡æ–‡åŒº','å®£æ­¦åŒº','æœé˜³åŒº','æµ·æ·€åŒº','ä¸°å°åŒº','çŸ³æ™¯å±±');
+city[1]=new Array('å®å±±','é‡‘å±±','å—å¸‚','é•¿å®','é™å®‰','é’æµ¦','å´‡æ˜','å¢æ¹¾','æ¾æ±Ÿ','å¥‰è´¤','æµ¦ä¸œ','æ¨æµ¦','è™¹å£','æ™®é™€','é—¸åŒ—','é»„æµ¦','é—µè¡Œ','å¾æ±‡','å˜‰å®š','å—æ±‡');
+city[2]=new Array('å¹¿å·','ç æµ·','ä¸­å±±','ä½›å±±','ä¸œè','æ¸…è¿œ','è‚‡åº†','é˜³æ±Ÿ','æ¹›æ±Ÿ','éŸ¶å…³','æƒ å·','æ²³æº','æ±•å°¾','æ±•å¤´','æ¢…å·');
+city[3]=new Array('ç½—æ¹–','ç¦ç”°','å—å±±','ç›ç”°','å®å®‰','é¾™å²—');
+city[4]=new Array('æ¸ä¸­','æ±ŸåŒ—','æ²™åªå','å—å²¸','ä¹é¾™å¡','å¤§æ¸¡å£');
+city[5]=new Array('å’Œå¹³','æ²³åŒ—','æ²³è¥¿','æ²³ä¸œ','å—å¼€','çº¢æ¡¥','å¡˜æ²½','æ±‰æ²½','å¤§æ¸¯','ä¸œä¸½','è¥¿é’','æ´¥å—','åŒ—è¾°','æ­¦æ¸…','æ»¨æµ·');
+city[6]=new Array('å¤ªåŸ','å¤§åŒ','é˜³æ³‰','æœ”å·','é•¿æ²»','ä¸´æ±¾','æ™‹åŸ');
+city[7]=new Array('å‘¼å’Œæµ©ç‰¹','åŒ…å¤´','ä¹Œæµ·','ä¸´æ²³','ä¸œèƒœ','é›†å®','é”¡æ—æµ©ç‰¹','é€šè¾½','èµ¤å³°','æµ·æ‹‰å°”','ä¹Œå…°æµ©ç‰¹');
+city[8]=new Array('æ²ˆé˜³','å¤§è¿','éå±±','é”¦å·','ä¸¹ä¸œ','ç›˜é”¦','é“å²­','æŠšé¡º','è¥å£','è¾½é˜³','é˜œæ–°','æœ¬æºª','æœé˜³','è‘«èŠ¦å²›');
+city[9]=new Array('é•¿æ˜¥','å‰æ—','å››å¹³','è¾½æº','é€šåŒ–','ç™½å±±','æ¾åŸ','ç™½åŸ','å»¶è¾¹');
+city[10]=new Array('å—äº¬','è‹å·','æ— é”¡','å¸¸å·','é•‡æ±Ÿ','è¿äº‘æ¸¯ ','æ‰¬å·','å¾å· ','å—é€š','ç›åŸ','æ·®é˜´','æ³°å·','å®¿è¿');
+city[11]=new Array('æ­å·','æ¹–å·','ä¸½æ°´','æ¸©å·','ç»å…´','èˆŸå±±','å˜‰å…´','é‡‘å','å°å·','è¡¢å·','å®æ³¢');
+city[12]=new Array('åˆè‚¥ ','èŠœæ¹– ','èšŒåŸ  ','æ»å· ','å®‰åº† ','å…­å®‰ ','é»„å±± ','å®£åŸ ','æ·®å— ','å®¿å· ','é©¬éå±± ','é“œé™µ','æ·®åŒ— ','é˜œé˜³ ','æ± å· ','å·¢æ¹– ','äº³å·');
+city[13]=new Array('å“ˆå°”æ»¨','é½é½å“ˆå°”','ç‰¡ä¸¹æ±Ÿ','ä½³æœ¨æ–¯','å¤§åº†','ä¼Šæ˜¥','é»‘æ²³','é¸¡è¥¿','é¹¤å²—','åŒé¸­å±±','ä¸ƒå°æ²³','ç»¥åŒ–','å¤§å…´å®‰å²­');
+city[14]=new Array('ç¦å· ','å¦é—¨ ','æ³‰å· ','æ¼³å· ','é¾™å²© ','å—å¹³ ','å®å¾· ','è†ç”° ','ä¸‰æ˜');
+city[15]=new Array('å—æ˜Œ','æ™¯å¾·é•‡','ä¹æ±Ÿ','èä¹¡','æ–°ä½™','é¹°æ½­','èµ£å·','å®œæ˜¥','å‰å®‰','ä¸Šé¥¶','æŠšå·');
+city[16]=new Array('æµå—','é’å²›','æ·„åš','å¾·å·','çƒŸå°','æ½åŠ','æµå®','æ³°å®‰','ä¸´æ²‚','èæ³½','å¨æµ·','æ£åº„','æ—¥ç…§','è±èŠœ','èŠåŸ','æ»¨å·','ä¸œè¥');
+city[17]=new Array('éƒ‘å·','å¼€å°','æ´›é˜³','å¹³é¡¶å±±','å®‰é˜³','é¹¤å£','æ–°ä¹¡','ç„¦ä½œ','æ¿®é˜³','è®¸æ˜Œ','æ¼¯æ²³','ä¸‰é—¨å³¡','å—é˜³','å•†ä¸˜','å‘¨å£','é©»é©¬åº—','ä¿¡é˜³','æµæº');
+city[18]=new Array('æ­¦æ±‰','é»„çŸ³','åå °','è†å·','å®œæ˜Œ','è¥„æ¨Š','é„‚å·','è†é—¨','å­æ„Ÿ','é»„å†ˆ','å’¸å®','æ©æ–½','éšå·','ä»™æ¡ƒ','å¤©é—¨','æ½œæ±Ÿ','ç¥å†œæ¶');
+city[19]=new Array('é•¿æ²™','æ ªå·','æ¹˜æ½­','è¡¡é˜³','é‚µé˜³','å²³é˜³','å¸¸å¾·','éƒ´å·','ç›Šé˜³','æ°¸å·','æ€€åŒ–','å¨„åº•','æ¹˜è¥¿ ');
+city[20]=new Array('å—å®','æŸ³å·','æ¡‚æ—','æ¢§å·','åŒ—æµ·','é˜²åŸæ¸¯','é’¦å·','è´µæ¸¯','ç‰æ—','è´ºå·','ç™¾è‰²','æ²³æ± ');
+city[21]=new Array('æµ·å£ ','ä¸‰äºš','é€šä»€','ç¼æµ·','ç¼å±±','æ–‡æ˜Œ','ä¸‡å®','ä¸œæ–¹','å„‹å·');
+city[22]=new Array('æˆéƒ½','è‡ªè´¡','æ”€æèŠ±','æ³¸å·','å¾·é˜³','ç»µé˜³','å¹¿å…ƒ','é‚å®','å†…æ±Ÿ','ä¹å±±','å—å…… ','å®œå®¾','å¹¿å®‰','è¾¾å·','å·´ä¸­','é›…å®‰','çœ‰å±± ','é˜¿å ','ç”˜å­œ ','å‡‰å±± ');
+city[23]=new Array('è´µé˜³ ','å…­ç›˜æ°´','éµä¹‰','é“œä»','æ¯•èŠ‚','å®‰é¡º','é»”è¥¿å— ','é»”ä¸œå—','é»”å—');
+city[24]=new Array('æ˜†æ˜','ä¸œå·','æ›²é–','ç‰æºª','æ˜­é€š','æ€èŒ…','ä¸´æ²§','ä¿å±±','ä¸½æ±Ÿ','æ–‡å±± ','çº¢æ²³ ','è¥¿åŒç‰ˆçº³ ','æ¥šé›„ ','å¤§ç† ','å¾·å® ','æ€’æ±Ÿ','è¿ªåº†');
+city[25]=new Array('æ‹‰è¨','é‚£æ›²','æ˜Œéƒ½','å±±å—','æ—¥å–€åˆ™','é˜¿é‡Œ','æ—èŠ');
+city[26]=new Array('è¥¿å®‰','é“œå·','å®é¸¡','å’¸é˜³','æ¸­å—','å»¶å®‰','æ±‰ä¸­','æ¦†æ—','å•†æ´›','å®‰åº·');
+city[27]=new Array('å…°å·','é‡‘æ˜Œ','ç™½é“¶','å¤©æ°´','å˜‰å³ªå…³','å®šè¥¿','å¹³å‡‰','åº†é˜³','é™‡å—','æ­¦å¨','å¼ æ–','é…’æ³‰','ç”˜å— ','ä¸´å¤');
+city[28]=new Array('è¥¿å®','æµ·ä¸œ',' æµ·åŒ— ','é»„å—','æµ·å—','æœæ´›','ç‰æ ‘','æµ·è¥¿');
+city[29]=new Array('é“¶å·','çŸ³å˜´å±±','é“¶å—','å›ºåŸ');
+city[30]=new Array('ä¹Œé²æœ¨é½','å…‹æ‹‰ç›ä¾','çŸ³æ²³å­','åé²ç•ª','å“ˆå¯†','å’Œç”°','é˜¿å…‹è‹','å–€ä»€','å…‹å­œå‹’è‹','å·´éŸ³éƒ­æ¥','æ˜Œå‰','åšå°”å¡”æ‹‰','ä¼ŠçŠ');
 city[31]=new Array();
 city[32]=new Array();
 city[33]=new Array();
 // var city= new Array();
 // city[0]=new Array();
-// city[0][0]="ÆÖ¶«";
-// city[0][1]="±¦É½";
-// city[0][2]="ÄÏÊĞ";
-// city[0][3]="³¤Äş";
-// city[0][4]="¾²°²";
-// city[0][5]="ÇàÆÖ";
-// city[0][6]="Â¬Íå";
-// city[0][7]="ËÉ½­";
-// city[0][8]="·îÏÍ";
-// city[0][9]="ºç¿Ú";
-// city[0][10]="ÆÕÍÓ";
+// city[0][0]="æµ¦ä¸œ";
+// city[0][1]="å®å±±";
+// city[0][2]="å—å¸‚";
+// city[0][3]="é•¿å®";
+// city[0][4]="é™å®‰";
+// city[0][5]="é’æµ¦";
+// city[0][6]="å¢æ¹¾";
+// city[0][7]="æ¾æ±Ÿ";
+// city[0][8]="å¥‰è´¤";
+// city[0][9]="è™¹å£";
+// city[0][10]="æ™®é™€";
 // city[1]=new Array();
-// city[1][0]="ÒË´º";
-// city[1][1]="ÄÏ²ı";
+// city[1][0]="å®œæ˜¥";
+// city[1][1]="å—æ˜Œ";
 
 
 // city[2]=new Array();
-// city[2][0]="ÉòÑô";
-// city[2][1]="´óÁ¬";
+// city[2][0]="æ²ˆé˜³";
+// city[2][1]="å¤§è¿";
 
 
 function changecity()
@@ -95,7 +95,7 @@ function changecity()
 	var pvalue=province.options[province.selectedIndex].value;
 	citys.options.length=0
 	if(pvalue==-1){
-		citys.options[citys.options.length]=new Option("³ÇÊĞ","-1");
+		citys.options[citys.options.length]=new Option("åŸå¸‚","-1");
 		
 	}
 	else
@@ -114,13 +114,13 @@ function changecity()
 
 function  vaild()
 {
-var a="^[A-Za-z0-9]{6,20}$";   //ÓÃ»§Ãû
+var a="^[A-Za-z0-9]{6,20}$";   //ç”¨æˆ·å
 
 
-// var passwd=^[a-zA-Z0-9]{6,20}+$;//ÓÃ»§ÃÜÂë
-// var passwd1=^[a-zA-Z0-9]{6,20}+$;//ÓÃ»§ÃÜÂë
-// var name=^[\u4e00-\u9fa5]{4,8}$;//ÕæÊµĞÕÃû
-var zj="^(\\d{14}|\\d{17})(\\d|[xX])$";//Ö¤¼şºÅÂë
+// var passwd=^[a-zA-Z0-9]{6,20}+$;//ç”¨æˆ·å¯†ç 
+// var passwd1=^[a-zA-Z0-9]{6,20}+$;//ç”¨æˆ·å¯†ç 
+// var name=^[\u4e00-\u9fa5]{4,8}$;//çœŸå®å§“å
+var zj="^(\\d{14}|\\d{17})(\\d|[xX])$";//è¯ä»¶å·ç 
 var usname=document.getElementById("username").value;
 var passwd=document.getElementById("password").value;
 var passwd1=document.getElementById("password1").value;
@@ -133,22 +133,22 @@ var birth=document.getElementById("birth").value;
 var fault="";
 if(usname==""||usname==null )
 {
-	fault=fault+"ÓÃ»§Ãû²»ÄÜÎª¿Õ";
+	fault=fault+"ç”¨æˆ·åä¸èƒ½ä¸ºç©º";
 	fault=fault+"\n";
 }
 else if(!usname.match(a))
 {
-	fault=fault+"ÓÃ»§Ãû¸ñÊ½²»ÕıÈ·";
+	fault=fault+"ç”¨æˆ·åæ ¼å¼ä¸æ­£ç¡®";
 	fault=fault+"\n";
 }
 
 
 if(passwd==""||passwd==null )
 {
-	fault=fault+"ÓÃ»§ÃûÃÜÂëÎª¿Õ";
+	fault=fault+"ç”¨æˆ·åå¯†ç ä¸ºç©º";
 	fault=fault+"\n";
 }else if(passwd.length!=6){
-	fault=fault+"ÓÃ»§ÃûÃÜÂë³¤¶È²»µÈÓÚ6";
+	fault=fault+"ç”¨æˆ·åå¯†ç é•¿åº¦ä¸ç­‰äº6";
 	fault=fault+"\n";
 }
 
@@ -157,41 +157,41 @@ if(passwd==""||passwd==null )
 
 if(passwd1!=passwd )
 {
-	fault=fault+"ÓÃ»§ÃûÃÜÂë²»Æ¥Åä";
+	fault=fault+"ç”¨æˆ·åå¯†ç ä¸åŒ¹é…";
 	fault=fault+"\n";
 }
 
 
 if(name==""||name==null )
 {
-	fault=fault+"ÕæÊµĞÕÃûÎª¿Õ";
+	fault=fault+"çœŸå®å§“åä¸ºç©º";
 	fault=fault+"\n";
 }
 
 
 if(province==-1 )
 {
-	fault=fault+"Ê¡·İÎª¿Õ";
+	fault=fault+"çœä»½ä¸ºç©º";
 	fault=fault+"\n";
 }
 
 
 if(city==-1 )
 {
-	fault=fault+"³ÇÊĞÎª¿Õ";
+	fault=fault+"åŸå¸‚ä¸ºç©º";
 	fault=fault+"\n";
 }
 
 
 if(zjnum==""||zjnum==null )
 {
-	fault=fault+"Ö¤¼şºÅÂëÎª¿Õ";
+	fault=fault+"è¯ä»¶å·ç ä¸ºç©º";
 	fault=fault+"\n";
 }
 else if(zjkind==1){
 	if(!usname.match(zj))
 {
-	fault=fault+"Ö¤¼şºÅÂë¸ñÊ½²»ÕıÈ·";
+	fault=fault+"è¯ä»¶å·ç æ ¼å¼ä¸æ­£ç¡®";
 	fault=fault+"\n";
 }
 }
@@ -199,7 +199,7 @@ else if(zjkind==1){
 
 if(birth==""||birth==null )
 {
-	fault=fault+"³öÉúÈÕÆÚÎª¿Õ";
+	fault=fault+"å‡ºç”Ÿæ—¥æœŸä¸ºç©º";
 	fault=fault+"\n";
 }
 if(fault=="")
@@ -225,50 +225,50 @@ alert(fault);
 <form action="login.html" method="post" ">
 <!-- onSubmit="return validate() -->
 <center>
-<font size ="8" color="black"><b>ÓÃ»§×¢²áĞÅÏ¢:</b></font>
+<font size ="8" color="black"><b>ç”¨æˆ·æ³¨å†Œä¿¡æ¯:</b></font>
 <table>
 <tr>
-<td colspan="2">×¢:±êÓĞ<font color="red">*</font>´¦£¬¾ùÎª±ØÌîÏî</td>
+<td colspan="2">æ³¨:æ ‡æœ‰<font color="red">*</font>å¤„ï¼Œå‡ä¸ºå¿…å¡«é¡¹</td>
 <!-- <td>?</td> -->
 </tr>
 <tr>
-<td colspan="2">µÇÂ¼ĞÅÏ¢£º</td>
+<td colspan="2">ç™»å½•ä¿¡æ¯ï¼š</td>
 <!-- <td>?</td> -->
 </tr>
 <tr>
-<td> <font color="red">*</font>µÇÂ¼Ãû:</td>
-<td> <input type="text" name="username" id="username" >ÓÉ×ÖÄ¸¡¢Êı×Ö»ò"_"×é³É,³¤¶È7-20Î»</td>
+<td> <font color="red">*</font>ç™»å½•å:</td>
+<td> <input type="text" name="username" id="username" >ç”±å­—æ¯ã€æ•°å­—æˆ–"_"ç»„æˆ,é•¿åº¦7-20ä½</td>
 </tr>
 <tr>
-<td> <font color="red">*</font>ÃÜÂë:</td>
-<td><input type="password" name="password" id="password" >²»ÉÙÓÚ6Î»×Ö·û</td>
+<td> <font color="red">*</font>å¯†ç :</td>
+<td><input type="password" name="password" id="password" >ä¸å°‘äº6ä½å­—ç¬¦</td>
 </tr>
 <tr>
-<td> <font color="red">*</font>È·ÈÏÃÜÂë:</td>
-<td><input type="password" name="conpassword" id="password1">ÇëÔÙÊäÒ»´Î</td>
+<td> <font color="red">*</font>ç¡®è®¤å¯†ç :</td>
+<td><input type="password" name="conpassword" id="password1">è¯·å†è¾“ä¸€æ¬¡</td>
 </tr>
 <tr>
-<td>ÏêÏ¸ĞÅÏ¢:</td>
+<td>è¯¦ç»†ä¿¡æ¯:</td>
 <td>&nbsp;</td>
 </tr>
 <tr>
-<td><font color="red">*</font>ÕæÊµĞÕÃû:</td>
+<td><font color="red">*</font>çœŸå®å§“å:</td>
 <td> <input type="text" name="realname" id="name"></td>
 </tr>
 <tr>
-<td><font color="red">*</font>ĞÔ±ğ:</td>
+<td><font color="red">*</font>æ€§åˆ«:</td>
 <td>
-<input type ="radio"  name="jsex"  value="ÄĞ" checked>ÄĞ
-<input type ="radio"  name="jsex"  value="Å®" >Å®
+<input type ="radio"  name="jsex"  value="ç”·" checked>ç”·
+<input type ="radio"  name="jsex"  value="å¥³" >å¥³
 
 
 </td>
 </tr>
 <tr>
-<td><font color="red">*</font>Ê¡·İ:</td>
+<td><font color="red">*</font>çœä»½:</td>
 <td>
 <select id="pro" onchange="changecity()">
-<option value="-1">Ê¡·İ</option>
+<option value="-1">çœä»½</option>
 <script  type="text/javascript">
 for(var i=0;i<province.length;i++)
 {
@@ -276,51 +276,51 @@ for(var i=0;i<province.length;i++)
 }
 </script>
 </select>
-³ÇÊĞ
+åŸå¸‚
 <select id="citys">
-  <option value="-1">ÊĞÏØ</option>
+  <option value="-1">å¸‚å¿</option>
 </select>
 </td>
 </tr>
 <tr>
-<td id="zjkind"><font color="red">*</font>Ö¤¼şÀàĞÍ:</td>
+<td id="zjkind"><font color="red">*</font>è¯ä»¶ç±»å‹:</td>
 <td><select name="certtype">
-  <option value="1">¶ş´úÉí·İÖ¤</option>
-  <option value="2">¸Û°ÄÍ¨ĞĞÖ¤</option>
-  <option value="3">¾üÈËÖ¤</option>
-  <option value="4">²Ğ¼²Ö¤</option>
+  <option value="1">äºŒä»£èº«ä»½è¯</option>
+  <option value="2">æ¸¯æ¾³é€šè¡Œè¯</option>
+  <option value="3">å†›äººè¯</option>
+  <option value="4">æ®‹ç–¾è¯</option>
 </select></td>
 </tr>
 <tr>
-<td><font color="red">*</font>Ö¤¼şºÅÂë:</td>
+<td><font color="red">*</font>è¯ä»¶å·ç :</td>
 <td> <input type="text" name="cert" id="zjnum"></td>
 </tr>
 <tr>
-<td><font color="red">*</font>³öÉúÈÕÆÚ:</td>
+<td><font color="red">*</font>å‡ºç”Ÿæ—¥æœŸ:</td>
 <td> <input type="text" id="birth" name="birth" onfocus="c.show(this);"/> </td>
 </tr>
 <tr>
-<td><font color="red">*</font>ÂÃ¿ÍÀàĞÍ:</td>
+<td><font color="red">*</font>æ—…å®¢ç±»å‹:</td>
 <td><select style="width:150px;" name="usertype">
-  <option value="1">³ÉÈË </option>
-  <option value="2">Ñ§Éú </option>
-  <option value="3">¶ùÍ¯ </option>
+  <option value="1">æˆäºº </option>
+  <option value="2">å­¦ç”Ÿ </option>
+  <option value="3">å„¿ç«¥ </option>
 </select>
 </td>
 </tr>
 <tr>
-<td name="comment">±¸×¢£º</td>
+<td name="comment">å¤‡æ³¨ï¼š</td>
 <td>
 <textarea rows="3" cols="20"></textarea>
 </td>
 </tr>
 <tr>
-<td><td><input type="checkbox" name="zlogin" value="1"  id="agreement" onclick="if (this.checked) {enable()} else {disable()}">ÎÒÒÑÔÄ¶Á²¢Í¬Òâ×ñÊØ<u><a href="http://www.12306.cn/mormhweb/zxdt/201402/t20140223_1435.html">¡¶ÖĞ¹úÌúÂ·¿Í»§·şÎñÖĞĞÄÍøÕ¾·şÎñÌõ¿î</a></u></td>
+<td><td><input type="checkbox" name="zlogin" value="1"  id="agreement" onclick="if (this.checked) {enable()} else {disable()}">æˆ‘å·²é˜…è¯»å¹¶åŒæ„éµå®ˆ<u><a href="http://www.12306.cn/mormhweb/zxdt/201402/t20140223_1435.html">ã€Šä¸­å›½é“è·¯å®¢æˆ·æœåŠ¡ä¸­å¿ƒç½‘ç«™æœåŠ¡æ¡æ¬¾</a></u></td>
 </tr>
 <tr>
-<!-- <td>?????<input type="button"  name="zhuche" value="×¢²á" id="accept" disabled="true" onclick="vaild();"></td> -->
-<td> <input type="submit"  name="zhuche" value="×¢²á" id="accept" disabled="true"></td>
-<td> <input type="reset" name="rs" value="ÖØÖÃ"></td>
+<!-- <td>?????<input type="button"  name="zhuche" value="æ³¨å†Œ" id="accept" disabled="true" onclick="vaild();"></td> -->
+<td> <input type="submit"  name="zhuche" value="æ³¨å†Œ" id="accept" disabled="true"></td>
+<td> <input type="reset" name="rs" value="é‡ç½®"></td>
 </tr>
 </table>
 </center>

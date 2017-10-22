@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta charset="UTF-8">
+<script src="./js/Calendar.js"></script>
+</script> 
+<script  type="text/javascript">
+var c = new Calendar("c"); 
+document.write(c);
+function disable()
+{
+document.getElementById("accept").disabled=true
+}
+function enable()
+{
+document.getElementById("accept").disabled=false
+}
+var province=new Array();
+province[0]="北京";province[1]="上海";province[2]="广东";province[3]="深圳";
+province[4]="重庆";province[5]="天津";province[6]="山西";
+province[7]="内蒙古";province[8]="辽宁";province[9]="吉林";province[10]="江苏";
+province[11]="浙江";	province[12]="安徽";province[13]="黑龙江";province[14]="福建";
+province[15]="江西";province[16]="山东";province[17]="河南";province[18]="湖北";
+province[19]="湖南";province[20]="广西";province[21]="海南";province[22]="四川";
+province[23]="贵州";province[24]="云南";province[25]="西藏";province[26]="陕西";
+province[27]="甘肃";province[28]="青海";province[29]="宁夏";province[30]="新疆";
+province[31]="香港";province[32]="澳门";	province[33]="台湾";
+
+
+var city =new Array();
+
+
+city[0]=new Array('东城区','西城区','崇文区','宣武区','朝阳区','海淀区','丰台区','石景山');
+city[1]=new Array('宝山','金山','南市','长宁','静安','青浦','崇明','卢湾','松江','奉贤','浦东','杨浦','虹口','普陀','闸北','黄浦','闵行','徐汇','嘉定','南汇');
+city[2]=new Array('广州','珠海','中山','佛山','东莞','清远','肇庆','阳江','湛江','韶关','惠州','河源','汕尾','汕头','梅州');
+city[3]=new Array('罗湖','福田','南山','盐田','宝安','龙岗');
+city[4]=new Array('渝中','江北','沙坪坝','南岸','九龙坡','大渡口');
+city[5]=new Array('和平','河北','河西','河东','南开','红桥','塘沽','汉沽','大港','东丽','西青','津南','北辰','武清','滨海');
+city[6]=new Array('太原','大同','阳泉','朔州','长治','临汾','晋城');
+city[7]=new Array('呼和浩特','包头','乌海','临河','东胜','集宁','锡林浩特','通辽','赤峰','海拉尔','乌兰浩特');
+city[8]=new Array('沈阳','大连','鞍山','锦州','丹东','盘锦','铁岭','抚顺','营口','辽阳','阜新','本溪','朝阳','葫芦岛');
+city[9]=new Array('长春','吉林','四平','辽源','通化','白山','松原','白城','延边');
+city[10]=new Array('南京','苏州','无锡','常州','镇江','连云港 ','扬州','徐州 ','南通','盐城','淮阴','泰州','宿迁');
+city[11]=new Array('杭州','湖州','丽水','温州','绍兴','舟山','嘉兴','金华','台州','衢州','宁波');
+city[12]=new Array('合肥 ','芜湖 ','蚌埠 ','滁州 ','安庆 ','六安 ','黄山 ','宣城 ','淮南 ','宿州 ','马鞍山 ','铜陵','淮北 ','阜阳 ','池州 ','巢湖 ','亳州');
+city[13]=new Array('哈尔滨','齐齐哈尔','牡丹江','佳木斯','大庆','伊春','黑河','鸡西','鹤岗','双鸭山','七台河','绥化','大兴安岭');
+city[14]=new Array('福州 ','厦门 ','泉州 ','漳州 ','龙岩 ','南平 ','宁德 ','莆田 ','三明');
+city[15]=new Array('南昌','景德镇','九江','萍乡','新余','鹰潭','赣州','宜春','吉安','上饶','抚州');
+city[16]=new Array('济南','青岛','淄博','德州','烟台','潍坊','济宁','泰安','临沂','菏泽','威海','枣庄','日照','莱芜','聊城','滨州','东营');
+city[17]=new Array('郑州','开封','洛阳','平顶山','安阳','鹤壁','新乡','焦作','濮阳','许昌','漯河','三门峡','南阳','商丘','周口','驻马店','信阳','济源');
+city[18]=new Array('武汉','黄石','十堰','荆州','宜昌','襄樊','鄂州','荆门','孝感','黄冈','咸宁','恩施','随州','仙桃','天门','潜江','神农架');
+city[19]=new Array('长沙','株州','湘潭','衡阳','邵阳','岳阳','常德','郴州','益阳','永州','怀化','娄底','湘西 ');
+city[20]=new Array('南宁','柳州','桂林','梧州','北海','防城港','钦州','贵港','玉林','贺州','百色','河池');
+city[21]=new Array('海口 ','三亚','通什','琼海','琼山','文昌','万宁','东方','儋州');
+city[22]=new Array('成都','自贡','攀枝花','泸州','德阳','绵阳','广元','遂宁','内江','乐山','南充 ','宜宾','广安','达川','巴中','雅安','眉山 ','阿坝 ','甘孜 ','凉山 ');
+city[23]=new Array('贵阳 ','六盘水','遵义','铜仁','毕节','安顺','黔西南 ','黔东南','黔南');
+city[24]=new Array('昆明','东川','曲靖','玉溪','昭通','思茅','临沧','保山','丽江','文山 ','红河 ','西双版纳 ','楚雄 ','大理 ','德宏 ','怒江','迪庆');
+city[25]=new Array('拉萨','那曲','昌都','山南','日喀则','阿里','林芝');
+city[26]=new Array('西安','铜川','宝鸡','咸阳','渭南','延安','汉中','榆林','商洛','安康');
+city[27]=new Array('兰州','金昌','白银','天水','嘉峪关','定西','平凉','庆阳','陇南','武威','张掖','酒泉','甘南 ','临夏');
+city[28]=new Array('西宁','海东',' 海北 ','黄南','海南','果洛','玉树','海西');
+city[29]=new Array('银川','石嘴山','银南','固原');
+city[30]=new Array('乌鲁木齐','克拉玛依','石河子','吐鲁番','哈密','和田','阿克苏','喀什','克孜勒苏','巴音郭楞','昌吉','博尔塔拉','伊犁');
+city[31]=new Array();
+city[32]=new Array();
+city[33]=new Array();
+// var city= new Array();
+// city[0]=new Array();
+// city[0][0]="浦东";
+// city[0][1]="宝山";
+// city[0][2]="南市";
+// city[0][3]="长宁";
+// city[0][4]="静安";
+// city[0][5]="青浦";
+// city[0][6]="卢湾";
+// city[0][7]="松江";
+// city[0][8]="奉贤";
+// city[0][9]="虹口";
+// city[0][10]="普陀";
+// city[1]=new Array();
+// city[1][0]="宜春";
+// city[1][1]="南昌";
+
+
+// city[2]=new Array();
+// city[2][0]="沈阳";
+// city[2][1]="大连";
+
+
+function changecity()
+{ 
+	var province=document.getElementById("pro");
+	var citys=document.getElementById("citys");
+	var pvalue=province.options[province.selectedIndex].value;
+	citys.options.length=0
+	if(pvalue==-1){
+		citys.options[citys.options.length]=new Option("城市","-1");
+		
+	}
+	else
+		{
+	for(var i=0;i<city[pvalue].length;i++)
+	{
+		var text=city[pvalue][i];
+		var value=i;
+		citys.options[citys.options.length]=new Option(text,value);
+	}	
+		}
+}
+
+
+
+
+function  vaild()
+{
+var a="^[A-Za-z0-9]{6,20}$";   //用户名
+
+
+// var passwd=^[a-zA-Z0-9]{6,20}+$;//用户密码
+// var passwd1=^[a-zA-Z0-9]{6,20}+$;//用户密码
+// var name=^[\u4e00-\u9fa5]{4,8}$;//真实姓名
+var zj="^(\\d{14}|\\d{17})(\\d|[xX])$";//证件号码
+var usname=document.getElementById("username").value;
+var passwd=document.getElementById("password").value;
+var passwd1=document.getElementById("password1").value;
+var name=document.getElementById("name").value;
+var province=document.getElementById("pro").value;
+var city=document.getElementById("citys").value;
+var zjkind=document.getElementById("zjkind").value;
+var zjnum=document.getElementById("zjnum").value;
+var birth=document.getElementById("birth").value;
+var fault="";
+if(usname==""||usname==null )
+{
+	fault=fault+"用户名不能为空";
+	fault=fault+"\n";
+}
+else if(!usname.match(a))
+{
+	fault=fault+"用户名格式不正确";
+	fault=fault+"\n";
+}
+
+
+if(passwd==""||passwd==null )
+{
+	fault=fault+"用户名密码为空";
+	fault=fault+"\n";
+}else if(passwd.length!=6){
+	fault=fault+"用户名密码长度不等于6";
+	fault=fault+"\n";
+}
+
+
+
+
+if(passwd1!=passwd )
+{
+	fault=fault+"用户名密码不匹配";
+	fault=fault+"\n";
+}
+
+
+if(name==""||name==null )
+{
+	fault=fault+"真实姓名为空";
+	fault=fault+"\n";
+}
+
+
+if(province==-1 )
+{
+	fault=fault+"省份为空";
+	fault=fault+"\n";
+}
+
+
+if(city==-1 )
+{
+	fault=fault+"城市为空";
+	fault=fault+"\n";
+}
+
+
+if(zjnum==""||zjnum==null )
+{
+	fault=fault+"证件号码为空";
+	fault=fault+"\n";
+}
+else if(zjkind==1){
+	if(!usname.match(zj))
+{
+	fault=fault+"证件号码格式不正确";
+	fault=fault+"\n";
+}
+}
+
+
+if(birth==""||birth==null )
+{
+	fault=fault+"出生日期为空";
+	fault=fault+"\n";
+}
+if(fault=="")
+{
+	document.forms[0].submit();
+//window.location.href="js3.html";
+//return true;
+}
+else
+{
+alert(fault);
+//return false;
+}
+
+}
+</script>
+</head>
+<body >
+<!-- <img src="images/21.gif" width="1200px" height="650" /> -->
+<!-- <div id="Layer1" style="position:absolute; left:0px; top:0px; width:100%; height:100%">   -->
+<img src="images/hua1.jpg" width="100%" height="100%" style="z-index:-100;position:absolute;left:0;top:0">
+<!-- </div> -->
+<form action="login.html" method="post" ">
+<!-- onSubmit="return validate() -->
+<center>
+<font size ="8" color="black"><b>用户注册信息:</b></font>
+<table>
+<tr>
+<td colspan="2">注:标有<font color="red">*</font>处，均为必填项</td>
+<!-- <td>?</td> -->
+</tr>
+<tr>
+<td colspan="2">登录信息：</td>
+<!-- <td>?</td> -->
+</tr>
+<tr>
+<td> <font color="red">*</font>登录名:</td>
+<td> <input type="text" name="username" id="username" >由字母、数字或"_"组成,长度7-20位</td>
+</tr>
+<tr>
+<td> <font color="red">*</font>密码:</td>
+<td><input type="password" name="password" id="password" >不少于6位字符</td>
+</tr>
+<tr>
+<td> <font color="red">*</font>确认密码:</td>
+<td><input type="password" name="conpassword" id="password1">请再输一次</td>
+</tr>
+<tr>
+<td>详细信息:</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td><font color="red">*</font>真实姓名:</td>
+<td> <input type="text" name="realname" id="name"></td>
+</tr>
+<tr>
+<td><font color="red">*</font>性别:</td>
+<td>
+<input type ="radio"  name="jsex"  value="男" checked>男
+<input type ="radio"  name="jsex"  value="女" >女
+
+
+</td>
+</tr>
+<tr>
+<td><font color="red">*</font>省份:</td>
+<td>
+<select id="pro" onchange="changecity()">
+<option value="-1">省份</option>
+<script  type="text/javascript">
+for(var i=0;i<province.length;i++)
+{
+	document.write("<option value='"+i+"'>"+province[i]+"</option>");
+}
+</script>
+</select>
+城市
+<select id="citys">
+  <option value="-1">市县</option>
+</select>
+</td>
+</tr>
+<tr>
+<td id="zjkind"><font color="red">*</font>证件类型:</td>
+<td><select name="certtype">
+  <option value="1">二代身份证</option>
+  <option value="2">港澳通行证</option>
+  <option value="3">军人证</option>
+  <option value="4">残疾证</option>
+</select></td>
+</tr>
+<tr>
+<td><font color="red">*</font>证件号码:</td>
+<td> <input type="text" name="cert" id="zjnum"></td>
+</tr>
+<tr>
+<td><font color="red">*</font>出生日期:</td>
+<td> <input type="text" id="birth" name="birth" onfocus="c.show(this);"/> </td>
+</tr>
+<tr>
+<td><font color="red">*</font>旅客类型:</td>
+<td><select style="width:150px;" name="usertype">
+  <option value="1">成人 </option>
+  <option value="2">学生 </option>
+  <option value="3">儿童 </option>
+</select>
+</td>
+</tr>
+<tr>
+<td name="comment">备注：</td>
+<td>
+<textarea rows="3" cols="20"></textarea>
+</td>
+</tr>
+<tr>
+<td><td><input type="checkbox" name="zlogin" value="1"  id="agreement" onclick="if (this.checked) {enable()} else {disable()}">我已阅读并同意遵守<u><a href="http://www.12306.cn/mormhweb/zxdt/201402/t20140223_1435.html">《中国铁路客户服务中心网站服务条款</a></u></td>
+</tr>
+<tr>
+<!-- <td>?????<input type="button"  name="zhuche" value="注册" id="accept" disabled="true" onclick="vaild();"></td> -->
+<td> <input type="submit"  name="zhuche" value="注册" id="accept" disabled="true"></td>
+<td> <input type="reset" name="rs" value="重置"></td>
+</tr>
+</table>
+</center>
+</form>
+</body>
+</html>
